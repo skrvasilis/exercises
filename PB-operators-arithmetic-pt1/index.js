@@ -31,10 +31,10 @@ let resultTwo= ((a+b)*c);
 console.log(resultTwo);
 
 // 8.
-console.log(a++);
+console.log(++a);
 
 // 9.
-console.log(b--);
+console.log(--b);
 
 
 // 10.
