@@ -44,4 +44,4 @@ console.log(d);
 console.log(d + c);
 
 // 11.
-console.log(resultOne/resultTwo);
+console.log(resultOne % resultTwo);
