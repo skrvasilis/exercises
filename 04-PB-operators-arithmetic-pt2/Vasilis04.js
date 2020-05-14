@@ -46,13 +46,13 @@ console.log('the volume of the cube is: '+ cubeVolume);
 // Q9.
 let billA = 22.35
 billA += billA * 10 / 100;
-console.log(billA + 'Euros');
+console.log(billA + ' Euros');
 let billB = 26.67;
 billB += billB * 15 / 100;
-console.log(billB + 'Euros');
+console.log(billB + ' Euros');
 let billC = 35.92;
 billC += billC * 20 / 100;
-console.log(billC + 'Euros');
+console.log(billC + ' Euros');
 
 // Q10.
 let averageHours = (8 + 6 + 5 + 9 + 8 + 2 + 1 + 8.5 + 7 + 4) / 10;
