@@ -35,14 +35,13 @@ console.log(squareArea + ' square meters');
 
 // Q7.
 let s = trianglePerimeter / 2;
-console.log(s);
 let triangleArea = Math.sqrt(s * ((s - sideA) * (s - sideB) * (s - sideC)));
 console.log(triangleArea + ' square meters');
 
 // Q8.
 let cubeSide = 9;
 let cubeVolume = cubeSide ** 3;
-console.log(cubeVolume);
+console.log('the volume of the cube is: '+ cubeVolume);
 
 // Q9.
 let billA = 22.35
