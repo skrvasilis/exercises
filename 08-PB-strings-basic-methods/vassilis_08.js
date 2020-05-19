@@ -12,7 +12,7 @@ console.log(`We convert the sentence to uppercase:
  ${hello.toUpperCase()}`);
 
 // 3.
-let earthling = 'HELLO EARTHLING';
+let earthling = 'Hello Earthling';
 console.log(`We convert the sentence to lowercase:
  ${earthling.toLowerCase()}`);
 
@@ -35,6 +35,7 @@ console.log(`the first character in the beginning and at the end:
 let lastThree = 'Ibiza';
 console.log(`the last 3 character in the beginning and at the end:
  ${lastThree.substring(2)}${lastThree}${lastThree.substring(2)}`);
+ console.log(`${lastThree.substring(lastThree.length-3)}${lastThree}${lastThree.substring(lastThree.length-3)}`);
 
 // 8.
 let changing = 'flamingo';
