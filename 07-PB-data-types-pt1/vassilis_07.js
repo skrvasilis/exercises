@@ -29,7 +29,7 @@ console.log(`${programmingLanguage} is fun:${isFun}`);
 
 // 10.
 console.log('the j and the S from javaScript');
-console.log(programmingLanguage[0] + programmingLanguage[4]);
+console.log(programmingLanguage[0]+ '\t' + programmingLanguage[4]);
 
 // 11.
 console.log('the length of javaScript is:');
