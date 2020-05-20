@@ -24,3 +24,12 @@ console.log(`we round down number 28.329: ${Math.floor(28.329)}`);
 let random = Math.random(); // we get a number between 0 and 1
 let dice = (random + 0.1) * 5; // we make sure that our number cannot be 0 and if we multiply with 5 we get a number between 0.1 and ~5.5
 console.log(Math.ceil(dice)); // if we round up the result we get a number between 1 and 6 
+
+
+// 3. second way
+let randomTwo = Math.random() * 6 + 1;
+console.log(Math.floor(randomTwo));
+
+// 3. third way
+let randomThree = 1 + Math.floor(Math.random()*6);
+console.log(randomThree);
