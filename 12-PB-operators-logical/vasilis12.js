@@ -21,3 +21,4 @@ console.log(z < y || z > x); // z is lower than y, the expected result is true
 console.log(x === z || x !== y); // x is not equal to z but x is unequal to y so the expected result is true
 console.log(x >= 10 && y <= 10); // x is bigger than 10 but y is not less or equal to 10 the expected result is false  
 console.log(x * z <= 100 || x * y > 100); // x * z is not bigger or equal to 100 but x*y is bigger than 100, expected result is true
+
