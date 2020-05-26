@@ -13,20 +13,20 @@ if (50 <= x && x <= 99 || 50 <= y && y <= 99 || 50 <= z && z <= 99) {
     console.log(true);
 }
 // 3. 
-let a = 1;
-let b = 112;
-let c = 21;
+let a = 21;
+let b = 1;
+let c = 33;
 if (a !== b && a !== c && b !== c) {
     if (a > b && a > c) {
-        console.log('a is bigger');
-    } else if (b > a && b > c) {
-        console.log('b is bigger');
+        console.log(`a is bigger ${a}`);
+    }else if (b > a && b > c) {
+        console.log(`b is bigger ${b}`);
     } else {
-        console.log('c is bigger');
+        console.log(`c is bigger ${c}`);
     }
 } else {
-    console.log('give different numbers');
-}
+     console.log('give different numbers');
+ }
 // 4.
 let myString = 'python';
 let mySecondString = 'Py' + myString;
