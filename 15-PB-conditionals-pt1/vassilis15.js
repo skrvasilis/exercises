@@ -15,12 +15,12 @@ if (50 <= x <= 99 || 50 <=  y <= 99 || 50 <= z <= 99) {
 // 3. 
 let a = 1;
 let b = 1;
-let c = 33;
+let c = 1;
 /* 
  if (Math.max(a , b , c) === a) {
      console.log(true);
  } */
-if (a !== b || a !== c || b !== c) {
+// if (a !== b || a !== c || b !== c) {
     if (a > b) {
         if (a > c) {
             console.log(`a is bigger ${a}`);
@@ -37,17 +37,16 @@ if (a !== b || a !== c || b !== c) {
             console.log(`c is bigger ${c}`);
         }
     }
-} else {
-    console.log('give different numbers');
+ else {
+    console.log(a);
 }
 // 4.
-let myString = 'python';
-let mySecondString = 'Py' + myString;
-let test = mySecondString.substring(0, 2);
-// console.log(mySecondString.startsWith('Py'[0,2]));
-
-if (test = 'Py') {
-    console.log(myString);
+let givenString = 'hello';
+let newString = 'Py' + givenString;
+let test = givenString.substring(0, 2);
+// console.log(givenString.startsWith('el',1));
+if (test === 'Py') {
+    console.log(givenString);
 }
 // 5.
 let numberA = 8;
@@ -78,17 +77,17 @@ if (numberA === numberB) {
 }
 //10. 
 let difference = numberA - 19;
-if (numberB > 19) {
+if (numberA > 19) {
     console.log(difference * 2);
 }
 // 11.
 let firstName = 'Max';
-let age = 23;
+let age = 18;
 if (age < 13) {
     console.log(`${firstName} is a child`);
-} else if (age >= 13 && age < 20) {
+} else if (age < 20) {
     console.log(`${firstName} is a teenager`);
-} else if (age >= 20 && age < 30) {
+} else if (age < 30) {
     console.log(`${firstName} is a young adult`);
 } else {
     console.log(`${firstName} is an adult`);
