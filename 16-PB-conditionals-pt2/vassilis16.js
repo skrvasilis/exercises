@@ -7,16 +7,12 @@ let johnMass = 73.3;
 let johnHeight = 1.80;
 
 // 2.
-let markBMI = markMass / (markHeight * 2);
-let johnBMI = johnMass / (johnHeight * 2);
+let markBMI = markMass / (markHeight ** 2);
+let johnBMI = johnMass / (johnHeight ** 2);
 
 // 3. // 4.
 let biggerBMI = markBMI > johnBMI ? true : false;
-if (biggerBMI === true) {
-    console.log('is Mark\'s BMI higher than John\'s? ' + biggerBMI + ' it is.');
-} else {
-    console.log('is Mark\'s BMI higher than John\'s? ' + biggerBMI + ' no it is not.');
-}
+console.log(`Is Mark's BMI bigger than John's? ${biggerBMI}`);
 
 // 5. 
 if (markBMI > johnBMI) {
