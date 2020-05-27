@@ -20,7 +20,7 @@ let c = 33;
  if (Math.max(a , b , c) === a) {
      console.log(true);
  } */
-if (a !== b && a !== c && b !== c) {
+if (a !== b || a !== c || b !== c) {
     if (a > b) {
         if (a > c) {
             console.log(`a is bigger ${a}`);
