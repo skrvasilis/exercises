@@ -32,4 +32,4 @@ else {
     console.log('you cannot drive');
     let drive = false;
 }
-/* age >=18 ? console.log('you can vote') let drive = true : console.log('you cannot');  we cannot do this */
+/* age >=18 ? console.log('you can vote') && let drive = true : console.log('you cannot drive') && let drive = false;  we cannot do this */
