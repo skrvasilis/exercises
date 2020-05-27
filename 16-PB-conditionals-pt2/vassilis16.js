@@ -7,22 +7,20 @@ let johnMass = 73.3;
 let johnHeight = 1.80;
 
 // 2.
-let markBMI = markMass/(markHeight*2);
-let johnBMI = johnMass/(johnHeight*2);
+let markBMI = markMass / (markHeight * 2);
+let johnBMI = johnMass / (johnHeight * 2);
 
 // 3. // 4.
-let biggerBMI = markBMI>johnBMI ? true : false;
-if (biggerBMI=== true) {
-    console.log('is Mark\'s BMI higher than John\'s? '+ biggerBMI + ' it is.');
-} 
-else {
-    console.log('is Mark\'s BMI higher than John\'s? '+ biggerBMI + ' no it is not.');
+let biggerBMI = markBMI > johnBMI ? true : false;
+if (biggerBMI === true) {
+    console.log('is Mark\'s BMI higher than John\'s? ' + biggerBMI + ' it is.');
+} else {
+    console.log('is Mark\'s BMI higher than John\'s? ' + biggerBMI + ' no it is not.');
 }
 
 // 5. 
 if (markBMI > johnBMI) {
     console.log(`Mark: ${markBMI.toFixed(2)}`);
-}
-else {
+} else {
     console.log(`John: ${johnBMI.toFixed(2)}`);
 }
