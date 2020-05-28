@@ -1,7 +1,7 @@
 'use strict';
 
 // 1.
-let allezaA = 116;
+let allezaA = 122;
 let allezaB = 94;
 let allezaC = 123;
 
@@ -54,6 +54,23 @@ if (maryAverage !== allezaAverage && maryAverage !== lisAverage && allezaAverage
     } else {
         console.log(`Marys's team is the winner with ${maryAverage} points`);
     }
+} else {
+    console.log(`the teams are having the same score ${lisAverage}`);
+}
+
+// second solution
+if (maryAverage > allezaAverage && maryAverage > lisAverage) {
+    console.log(`Marys's team is the winner with ${maryAverage} points`);
+} else if (allezaAverage > maryAverage && allezaAverage > lisAverage) {
+    console.log(`Alleza's team is the winner with ${allezaAverage} points`);
+} else if (lisAverage > maryAverage && lisAverage > allezaAverage) {
+    console.log(`Lis's team is the winner with ${lisAverage} points`);
+} else if (allezaAverage === maryAverage) {
+    console.log(`Marys's and Alleza's teams are the winners with ${maryAverage} points`);
+} else if (allezaAverage === lisAverage) {
+    console.log(`Lis's's and Alleza's teams are the winners with ${lisAverage} points`);
+} else if (lisAverage === maryAverage) {
+    console.log(`Marys's and Lis's teams are the winners with ${maryAverage} points`);
 } else {
     console.log(`the teams are having the same score ${lisAverage}`);
 }
