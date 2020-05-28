@@ -18,6 +18,7 @@ else {
     let message = 'Negative integer';
     console.log(message);
 }
+console.log(updater);
 //console.log(message); error: message is not defined
 
 3. 
@@ -33,3 +34,4 @@ else {
     let drive = false;
 }
 /* age >=18 ? console.log('you can vote') && let drive = true : console.log('you cannot drive') && let drive = false;  we cannot do this */
+
