@@ -1,6 +1,6 @@
 'use strict';
 
-let number = 2000;
+let number = 0;
 
 if (number % 3 === 0 && number % 5 === 0) {
     console.log('FizzBuzz');
@@ -14,7 +14,7 @@ if (number % 3 === 0 && number % 5 === 0) {
 
 
 // second solution with switch case super complicated but it works
-let numberB = 30;
+let numberB = 3;
 let modulo = numberB % 15;
 // console.log(modulo);
 let modulo3 = numberB % 3;
