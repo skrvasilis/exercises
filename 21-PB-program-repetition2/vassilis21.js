@@ -12,11 +12,11 @@ let num = 1;
 let mySum = 0;
 while (num <= 20) {
     mySum = mySum + num;
-    console.log(mySum);
+    
     num++;
 }
 
-
+console.log(mySum);
 // 3.
 let num3 = 0;
 do {
