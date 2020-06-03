@@ -117,13 +117,3 @@ for (let i = 1, first = '', last = ''; i<=myLength; i++) {
 console.log(palindrome); 
 
 
-/* let    i =1;
-let    first = myString8[myString8.length - i];
-let    last = myString8[i-1];
- while (first === last) {
-     palindrome = true;
-     i++;
-     first = myString8[myString8.length - i];
-     last = myString8[i-1];
-} 
-console.log(palindrome); */
