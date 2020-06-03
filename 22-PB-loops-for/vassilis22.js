@@ -99,7 +99,7 @@ for (let i = 0; i<=2; i++) {
 
 // 8.
 console.log('ex.8');
-let myString8 = 'madam';
+let myString8 = 'tarrattarrat';
 let myLength = myString8.length;
 let palindrome = false;
 for (let i = 1, first = '', last = ''; i<=myLength; i++) {
@@ -111,6 +111,7 @@ for (let i = 1, first = '', last = ''; i<=myLength; i++) {
         palindrome = true;
     } else {
         palindrome = false;
+        i = myLength+1;
     }
 }
 console.log(palindrome); 
