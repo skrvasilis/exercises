@@ -63,57 +63,78 @@ for (let i = 1; i <= 100; i++) {
 let sum6 = 0;
 for (let i = 0; i < 1000; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
-        sum6+=i;
-}
+        sum6 += i;
+    }
 }
 console.log(sum6);
 
 // 7. 
 let hundred = '';
-for (let i=100; i<=1000; i+=100) {
-    hundred = hundred +' ' + i;  
+for (let i = 100; i <= 1000; i += 100) {
+    hundred = hundred + ' ' + i;
 }
 console.log(hundred);
 
-for (let i = 1, j = 1; i<=8; i++) {
-    console.log('7.b ' , j);
-    j=j*2;
+let multiple2 = ''
+for (let i = 1, j = 1; i <= 7; i++) {
+    j = j * 2;
+    multiple2 = multiple2 + ' ' + j;
 }
+console.log(multiple2);
 
-for (let i = 0; i <=10; i+=2) {
-    console.log('7.c ' , i);
+let plus2 = '';
+for (let i = 0; i <= 10; i += 2) {
+    // console.log('7.c ', i);
+    plus2 = plus2 + ' ' + i;
 }
+console.log(plus2);
 
-for (let i = 3; i<=15; i+=3) {
-    console.log('7.d ' , i);
+let plus3 = ''
+for (let i = 3; i <= 15; i += 3) {
+    // console.log('7.d ', i);
+    plus3 = plus3 + ' ' + i;
 }
-for (let i = 9; i>=0; i--) {
-    console.log('7.e ',  i);
+console.log(plus3);
+
+let minus = '';
+for (let i = 9; i >= 0; i--) {
+    // console.log('7.e ', i);
+    minus = minus + ' ' + i;
 }
-// missing
-for (let i = 0; i<=2; i++) {
-    for (let j = 0; j<=4; j++) {
-        console.log('7. j' , j);
+console.log(minus);
+
+let many = '';
+for (let i = 1; i <= 4; i++) {
+    for (let j = 1; j <= 3; j++) {
+        // console.log('7.f ', i);
+        many = many + ' ' + i;
     }
 }
+console.log(many);
 
+let toFour = '';
+for (let i = 0; i <= 2; i++) {
+    for (let j = 0; j <= 4; j++) {
+        // console.log('7. j', j);
+        toFour = toFour + ' ' + j;
+    }
+}
+console.log(toFour);
 // 8.
 console.log('ex.8');
-let myString8 = 'tarrattarrat';
+let myString8 = 'tarratterrat';
 let myLength = myString8.length;
 let palindrome = false;
-for (let i = 1, first = '', last = ''; i<=myLength; i++) {
+for (let i = 1, first = '', last = ''; i <= myLength; i++) {
     //  console.log(myString[myString.length - i]);
     //  console.log(myString[i-1]);
     first = myString8[myString8.length - i];
-    last = myString8[i-1];
+    last = myString8[i - 1];
     if (first === last) {
         palindrome = true;
     } else {
         palindrome = false;
-        i = myLength+1;
+        i = myLength + 1;
     }
 }
-console.log(palindrome); 
-
-
+console.log(palindrome);
