@@ -102,7 +102,7 @@ for (let i = 100; i <= 1000; i += 100) {
 console.log(hundred);
 
 let multiple2 = ''
-for (let j = 1; j <= 128; j= j*2) {
+for (let j = 1; j <= 128; j = j * 2) {
     console.log('7.b ' + j);
 
 
@@ -187,11 +187,11 @@ console.log(palindrome);
 let inputString = "12345";
 let compareString = "";
 for (let i = inputString.length; i >= 1; i--) {
-  compareString += inputString[i - 1];
-//   console.log(compareString);
+    compareString += inputString[i - 1];
+    //   console.log(compareString);
 }
 console.log(
-  inputString === compareString
-    ? `'${inputString}' is a palindrome. :)`
-    : `'${inputString}' is not a palindrome. :(`
+    inputString === compareString ?
+    `'${inputString}' is a palindrome. :)` :
+    `'${inputString}' is not a palindrome. :(`
 );
