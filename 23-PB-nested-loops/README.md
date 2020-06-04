@@ -24,3 +24,5 @@
        *****
         ***
          *
+
+// BONUS : Play around to make RHOMBUS :D
