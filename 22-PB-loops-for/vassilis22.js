@@ -87,6 +87,8 @@ let sum6 = 0;
 for (let i = 0; i < 1000; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
         sum6 += i;
+    } else {
+        continue; // goes to the next 
     }
 }
 console.log(sum6);
@@ -164,7 +166,7 @@ for (let i = 0; i <= 2; i++) {
 console.log(toFour);
 // 8.
 console.log('ex.8');
-let myString8 = 'madam';
+let myString8 = 'mdam';
 let myLength = myString8.length;
 let palindrome = false;
 for (let i = 1, first = '', last = ''; i <= myLength; i++) {
@@ -176,7 +178,7 @@ for (let i = 1, first = '', last = ''; i <= myLength; i++) {
         palindrome = true;
     } else {
         palindrome = false;
-        i = myLength + 1;
+        break; // this would stop the loop
     }
 }
 console.log(palindrome);
@@ -184,11 +186,11 @@ console.log(palindrome);
 // second solution
 
 
-let inputString = "12345";
+let inputString = "anna";
 let compareString = "";
-for (let i = inputString.length; i >= 1; i--) {
-    compareString += inputString[i - 1];
-    //   console.log(compareString);
+for (let i = 1; i <= inputString.length; i++) {
+    compareString += inputString[inputString.length - i];
+    // console.log(compareString);
 }
 console.log(
     inputString === compareString ?
