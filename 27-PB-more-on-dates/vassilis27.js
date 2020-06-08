@@ -1,9 +1,7 @@
 const givenDate = new Date('2020-02-13');
-// console.log(givenDate.getDate());
-// console.log(givenDate.getUTCMonth())
+
 const daysFunction = (checkDay) => {
     month = checkDay.getMonth();
-    // console.log(month);
     let remainDays = 0;
     switch (month) {
         case 0:
@@ -32,12 +30,4 @@ const daysFunction = (checkDay) => {
 
 
 daysFunction(givenDate);
-
-let myDate = new Date('2020-02-14');
-console.log(myDate);
-console.log(myDate.toLocaleDateString());
-
-myDate = myDate.setFullYear(1993);
-console.log(myDate);
-// console.log(myDate.toLocaleDateString());
-
+daysFunction(new Date('2020-06-08'));
