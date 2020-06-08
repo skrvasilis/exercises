@@ -11,6 +11,6 @@ const eventFunction = (today, givenDate) => {
     }
 }
 
-const givenDate = new Date('2020-10-1');
-const today = new Date();
-eventFunction(today, givenDate);
+const userDate = new Date('2020-10-1');
+const currentDay = new Date();
+eventFunction(currentDay, userDate);
