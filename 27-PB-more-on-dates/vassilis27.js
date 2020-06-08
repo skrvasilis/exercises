@@ -1,17 +1,11 @@
-const givenDate = new Date('2020-02-13');
+'use strict';
 
 const daysFunction = (checkDay) => {
-    month = checkDay.getMonth();
+    let month = checkDay.getMonth();
     let remainDays = 0;
     switch (month) {
-        case 0:
-        case 2:
-        case 4:
-        case 6:
-        case 7:
-        case 9:
-        case 11:
-            remainDays = 31 - checkDay.getDate();
+        case 1:
+            remainDays = 28 - checkDay.getDate();
             console.log(remainDays, 'days till the end of the month');
             break;
         case 3:
@@ -22,12 +16,13 @@ const daysFunction = (checkDay) => {
             console.log(remainDays, 'days till the end of the month');
             break;
         default:
-            remainDays = 28 - checkDay.getDate();
+            remainDays = 31 - checkDay.getDate();
             console.log(remainDays, 'days till the end of the month');
     }
 
 }
 
-
+const givenDate = new Date();
+givenDate.setFullYear(2020, 1, 13) // 13th of february
 daysFunction(givenDate);
 daysFunction(new Date('2020-06-08'));
