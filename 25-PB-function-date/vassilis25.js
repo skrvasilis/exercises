@@ -1,8 +1,7 @@
+'use strict';
+
 const eventFunction = (today, givenDate) => {
-    // console.log(today);
-    future = givenDate.getTime();
-    // console.log(future);
-    if (today < future) {
+    if (today < givenDate) {
         let day = givenDate.getDate();
         let month = givenDate.getMonth() + 1;
         let year = givenDate.getFullYear();
@@ -12,6 +11,6 @@ const eventFunction = (today, givenDate) => {
     }
 }
 
-const givenDate = new Date('2019-10-31');
-today = new Date().getTime()
+const givenDate = new Date('2020-10-1');
+const today = new Date();
 eventFunction(today, givenDate);
