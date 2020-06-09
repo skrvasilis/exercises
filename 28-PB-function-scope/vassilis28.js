@@ -1,13 +1,16 @@
 'use strict';
 
 // 1.
+
 const myNumbers = (a, b) => {
     if (typeof a === 'number' && typeof b === 'number') {
         console.log('They are numbers');
+        let multiple2 = ''; // as a string
         for (let i = 1; i <= b; i++) {
-            console.log(a ** i);
+            // console.log(a ** i);
+            multiple2 = multiple2 + ' ' + a ** i;
         }
-
+        console.log(multiple2);
     } else {
         console.log('They are not both numbers');
     }
