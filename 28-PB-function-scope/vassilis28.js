@@ -4,33 +4,36 @@
 
 const myNumbers = (a, b) => {
     if (typeof a === 'number' && typeof b === 'number') {
+        console.log(typeof a);
         console.log('They are numbers');
         let multiple2 = ''; // as a string
         for (let i = 1; i <= b; i++) {
-            // console.log(a ** i);
+            console.log(a ** i);
             multiple2 = multiple2 + ' ' + a ** i;
+            console.log(multiple2);
         }
-        console.log(multiple2);
+        // console.log(multiple2);
     } else {
         console.log('They are not both numbers');
     }
 }
 
 myNumbers(2, 8);
+myNumbers(3, 5);
 
 // 2.
-const myFruit = 'Apple';
-const printFavoriteFruit = (myFruit) => {
-    myFruit = 'Peach';
+let myFruit = 'Apple';
+const printFavoriteFruit = () => {
+  let  myFruit = 'Peach';
     console.log('My favorite fruit is:', myFruit);
 }
-printFavoriteFruit(myFruit);
+printFavoriteFruit();
+console.log('My favorite fruit is:', myFruit);
 
 // 3. 
-let result = 0;
-
+// let result = 0;
 function exponent(a, b) {
-    //    let result = a**b;
+     let result = a**b;
     result = a ** b;
     console.log('inside the function ', result);
 }
