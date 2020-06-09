@@ -17,9 +17,9 @@ myNumbers(2, 8);
 
 // 2.
 const myFruit = 'Apple';
-const printFavoriteFruit = (fruit) => {
-    fruit = 'Peach';
-    console.log('My favorite fruit is:', fruit);
+const printFavoriteFruit = (myFruit) => {
+    myFruit = 'Peach';
+    console.log('My favorite fruit is:', myFruit);
 }
 printFavoriteFruit(myFruit);
 
