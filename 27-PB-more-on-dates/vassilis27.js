@@ -26,3 +26,16 @@ const givenDate = new Date();
 givenDate.setFullYear(2020, 1, 13) // 13th of february
 daysFunction(givenDate);
 daysFunction(new Date('2020-06-08'));
+
+
+// marcel 
+let today = new Date();
+today.setFullYear(2020, 2, 2);
+const remainingDays = (now) => {
+    let yearToday = now.getFullYear();
+    let monthToday = now.getMonth();
+    let dayToday = now.getDate();
+    let endOfMonth = new Date(yearToday, monthToday + 1, 0).getDate();
+    console.log(endOfMonth - dayToday);
+}
+remainingDays(today);
