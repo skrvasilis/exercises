@@ -16,25 +16,13 @@ console.log(addUp13)
 const addUp600 = addUp(600);
 console.log(addUp600);
 
-// 2.
-const sumOfCubers = (a, b, c) => {
-    if (a === undefined) {
-        a = 0;
-    }
-    if (b === undefined) {
-        b = 0;
-    }
-    if (c === undefined) {
-        c = 0;
-    }
-    return a ** 3 + b ** 3 + c ** 3;
-}
+// 2. // we give default value to the parameters
+const sumOfCubers = (a = 0, b = 0, c = 0) => a ** 3 + b ** 3 + c ** 3;
+
 const cubers1 = sumOfCubers(1, 5, 9);
-console.log(cubers1);
 const cubers2 = sumOfCubers(2);
-console.log(cubers2);
 const cubers0 = sumOfCubers();
-console.log(cubers0);
+console.log(cubers1, cubers2, cubers0);
 
 // 3.
 const dictionary = (myString, myWord) => {
@@ -53,6 +41,12 @@ console.log('string check ' + dictionary("bu", "button"));
 console.log('string check ' + dictionary("tri", "triplet"));
 console.log('string check ' + dictionary("beau", "pastry"));
 
+// 3. Daniel
+const stringStart = (init, word) => word.startsWith(init);
+
+console.log('string check 2 :' + stringStart('bu', 'button'));
+console.log('string check 2 :' + stringStart('tri', 'triplet'));
+console.log('string check 2 :' + stringStart('beau', 'pastry'));
 
 // 4.
 const lessThanEqualToZero = (x) => {
@@ -62,50 +56,54 @@ const lessThanEqualToZero = (x) => {
         return true;
     }
 }
-console.log(lessThanEqualToZero(3));
-console.log(lessThanEqualToZero(-0));
-console.log(lessThanEqualToZero(-4));
-console.log(lessThanEqualToZero(10));
+console.log('smaller than zero ' + lessThanEqualToZero(3));
+console.log('smaller than zero ' + lessThanEqualToZero(-0));
+console.log('smaller than zero ' + lessThanEqualToZero(-4));
+console.log('smaller than zero ' + lessThanEqualToZero(10));
+
+// 4. second way
+const smallerThanZero = (x) => x <= 0;
+console.log('smaller than zero 2 ' + smallerThanZero(3));
+console.log('smaller than zero 2 ' + smallerThanZero(-0));
+console.log('smaller than zero 2 ' + smallerThanZero(-4));
+console.log('smaller than zero 2 ' + smallerThanZero(10));
 
 // 5.
 const occurrences = (myString, letter) => {
     let result = 0;
-    let myNewString = '';
-    myNewString = myString;
-    for (let i = 0; i < myNewString.length; i++) {
-        // console.log(myNewString[i]);
-        if (myNewString[i] === letter) {
+    for (let i = 0; i < myString.length; i++) {
+        // console.log(myString.charAt(i));
+        if (myString[i] === letter) {
             result += 1;
         }
     }
     return result;
 }
-occurrences('this is a string', 'i');
 let firstCheck = occurrences('this is a string', 'i');
 console.log('occurrences ' + firstCheck);
-let secondCheck = occurrences('more and more and more oo', 'o');
+let secondCheck = occurrences('more and more and more ooh', 'o');
 console.log('occurrences ' + secondCheck);
 
 //6.
-const calculateBaseToExponent = (x, y) => {
-    return x ** y;
-}
+const calculateBaseToExponent = (x, y) => x ** y;
 console.log(calculateBaseToExponent(3, 3));
 console.log(calculateBaseToExponent(5, 5));
 console.log(calculateBaseToExponent(10, 10));
 
+// 6. without a function
+console.log(Math.pow(5, 5));
+
 // 7.
-const dogAge = (dogYears) => {
-    return dogYears * 7;
-}
+const dogAge = (dogYears) => `Your dog is ${dogYears * 7} years ols in human years`;
+
 const dog4 = dogAge(4);
-console.log(`your dog is ${dog4} years old in human years!`)
+console.log(dog4);
 
 
 // 8.
 const calcSupply = (age, amount) => {
     const yearsLeft = 80 - age;
-    const restAmount = (amount * 365) * yearsLeft;
+    const restAmount = amount * 365 * yearsLeft;
     return `You will need ${restAmount} of your favorite snack (${amount} per day) to last you till the age of 80`;
 }
 const mySnack = calcSupply(25, 2);
@@ -115,20 +113,13 @@ console.log(yourSnack);
 
 
 // 9.
-const isWaldoHere = (myString) => {
-    let myNewString = '';
-    myNewString = myString;
-    // console.log(myNewString);
-    return myNewString.includes('waldo') || myNewString.includes('Waldo');
+const isWaldoHere = (myString) => myString.toLowerCase().includes('waldo');
 
-}
-
-const myResult = isWaldoHere('i found Waldo');
+const myResult = isWaldoHere('is there wal here?');
 console.log('is waldo here? ' + myResult);
-console.log('is waldo here? ' + isWaldoHere('is there wal here'));
+console.log('is waldo here? ' + isWaldoHere('I found you Waldo!'));
+console.log('is waldo here? ' + isWaldoHere('is wally here?'));
 console.log('is waldo here? ' + isWaldoHere('waldo is here'));
-
-
 
 // 10.
 const equalSlices = (slices, recipients, persons) => {
@@ -142,6 +133,14 @@ console.log(equalSlices(11, 5, 3));
 console.log(equalSlices(8, 3, 2));
 console.log(equalSlices(8, 3, 3));
 console.log(equalSlices(24, 12, 2));
+
+// 10. shorter way
+const slices2 = (slices, recipients, persons) => persons * recipients <= slices;
+console.log(slices2(11, 5, 3));
+console.log(slices2(8, 3, 2));
+console.log(slices2(8, 3, 3));
+console.log(slices2(24, 12, 2));
+
 
 // 11.
 const XO = (myString) => {
@@ -158,21 +157,19 @@ const XO = (myString) => {
         } else if (myNewString[i] === 'x') {
             resultX += 1;
         }
-
     }
     if (resultO === resultX) {
         return true;
     } else {
         return false;
     }
-
 }
 
-console.log('XO: ' + XO('oOxX'));
-console.log('XO: ' + XO('ooXXm'));
-console.log('XO: ' + XO('ypypypy'));
-console.log('XO: ' + XO('xooxx'));
-console.log('XO: ' + XO('zzoo'));
+console.log(XO('ooxx'));
+console.log(XO('xooxx'));
+console.log(XO('ooxXm'));
+console.log(XO('zpzpzpp'));
+console.log(XO('zzoo'));
 
 // 12. 
 const isPrime = (x) => {
@@ -181,7 +178,6 @@ const isPrime = (x) => {
     } else {
         for (let i = 2; i < x; i++) {
             if (x % i === 0) {
-                // console.log(i);
                 return false;
             }
         }
@@ -197,21 +193,22 @@ console.log('is it prime: ', isPrime(10));
 const validateEmail = (myEmail) => {
     let myNewString = '';
     myNewString = myEmail;
-    if (myNewString.includes('@') && myNewString.includes('.')) {
         console.log(myEmail);
         if (myNewString[0] !== '@') {
             const myStringLength = myNewString.length;
             let dotPlace = 0;
             let atPlace = 0;
+            let countAt = 0;
             for (let i = 0; i <= myStringLength; i++) {
                 if (myNewString[i] === '.') {
                     dotPlace = i;
                 }
                 if (myNewString[i] === '@') {
+                    countAt++;
                     atPlace = i;
                 }
             }
-            if (atPlace < dotPlace) {
+            if (atPlace < dotPlace && countAt === 1) {
                 return true;
             } else {
                 return false;
@@ -219,10 +216,7 @@ const validateEmail = (myEmail) => {
         } else {
             return false;
         }
-    } else {
-        return false;
     }
-}
 console.log(validateEmail('john@example.com'));
 console.log(validateEmail('@example.com'));
 console.log(validateEmail('john.smith@com'));
