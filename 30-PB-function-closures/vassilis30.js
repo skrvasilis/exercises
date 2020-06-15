@@ -29,3 +29,21 @@ console.log(multiplierVar(7));
     }
 
 })(40, 60, 1000);
+
+
+// second way
+let age = 40;
+let retireAge = 60;
+let wage = 1000;
+let percent = 10;
+(function () {
+    if (age > retireAge) {
+        console.log('You\'re already retired!')
+    } else {
+        let years = (retireAge - age);
+        let months = (years * 12);
+        let moneyPerMonth = wage * percent / 100;
+        console.log(months * moneyPerMonth);
+    }
+
+})();
