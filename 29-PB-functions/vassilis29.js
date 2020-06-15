@@ -32,9 +32,9 @@ const dictionary = (myString, myWord) => {
     // console.log(myString);
     // console.log(myNewString.substring(-1,myStringLength));
     if (myString === myNewString.substring(-1, myStringLength)) {
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 console.log('string check ' + dictionary("bu", "button"));
@@ -91,7 +91,10 @@ console.log(calculateBaseToExponent(5, 5));
 console.log(calculateBaseToExponent(10, 10));
 
 // 6. without a function
-console.log(Math.pow(5, 5));
+const mathPow = (x, y) => {
+    return Math.pow(x, y);
+}
+console.log(mathPow(5, 5));
 
 // 7.
 const dogAge = (dogYears) => `Your dog is ${dogYears * 7} years ols in human years`;
@@ -193,30 +196,30 @@ console.log('is it prime: ', isPrime(10));
 const validateEmail = (myEmail) => {
     let myNewString = '';
     myNewString = myEmail;
-        console.log(myEmail);
-        if (myNewString[0] !== '@') {
-            const myStringLength = myNewString.length;
-            let dotPlace = 0;
-            let atPlace = 0;
-            let countAt = 0;
-            for (let i = 0; i <= myStringLength; i++) {
-                if (myNewString[i] === '.') {
-                    dotPlace = i;
-                }
-                if (myNewString[i] === '@') {
-                    countAt++;
-                    atPlace = i;
-                }
+    console.log(myEmail);
+    if (myNewString[0] !== '@') {
+        const myStringLength = myNewString.length;
+        let dotPlace = 0;
+        let atPlace = 0;
+        let countAt = 0;
+        for (let i = 0; i <= myStringLength; i++) {
+            if (myNewString[i] === '.') {
+                dotPlace = i;
             }
-            if (atPlace < dotPlace && countAt === 1) {
-                return true;
-            } else {
-                return false;
+            if (myNewString[i] === '@') {
+                countAt++;
+                atPlace = i;
             }
+        }
+        if (atPlace < dotPlace && countAt === 1) {
+            return true;
         } else {
             return false;
         }
+    } else {
+        return false;
     }
+}
 console.log(validateEmail('john@example.com'));
 console.log(validateEmail('@example.com'));
 console.log(validateEmail('john.smith@com'));
