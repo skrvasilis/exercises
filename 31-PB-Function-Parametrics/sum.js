@@ -11,4 +11,4 @@ const sum = (...args) => {
 console.log(sum(1)); // -> 1
 console.log(sum(1, 15)); // -> 16
 console.log(sum(25, 25, 20)); // -> 70
-console.log(sum(10, 44,66,192,33,15,82,18)); 
+console.log(sum(10, 44, 66, 192, 33, 15, 82, 18));
