@@ -49,3 +49,25 @@ console.log('ex 11 ', worldCities);
 worldCities.splice(1, 0, 'Washington');
 console.log('ex 12 ', worldCities);
 
+
+// 13.
+let myString = '';
+for (let i = 0; i < worldCities.length; i++) {
+    myString = myString + ' ' + worldCities[i];
+}
+console.log('ex.13', myString);
+
+// 13 second
+console.log('ex 13 2nd ', worldCities.join(', '));
+
+// bonus
+function reverseFun(str) {
+    let reverseString = [];
+    for (let i = 1; i <= str.length; i++) {
+        reverseString.push(str[str.length - i]);
+    }
+    return reverseString.join('');
+}
+console.log(reverseFun('hello world'));
+
+
