@@ -7,11 +7,10 @@
 
 const average = (...args) => {
     let sum = 0;
-    let i = 0;
-    for (i = 0; i < args.length; i++) {
+    for (let i = 0; i < args.length; i++) {
         sum += args[i];
     }
-    return sum / i;
+    return sum / args.length;
 };
 
 console.log(average(0)); // -> 0
@@ -19,3 +18,4 @@ console.log(average(1, 2)); // -> 1.5
 console.log(average(1, 3, 6, 10)); // -> 5
 console.log(average(12, 14, 16)); // -> 14
 console.log(average(9.8, 8.9, 9, 7.5, 9.9));
+
