@@ -81,3 +81,5 @@ myFamily.push('Atari');
 console.log(myFamily);
 myFamily.reverse();
 console.log(myFamily);
+myFamily.splice(2,1,'Peter');
+console.log(myFamily);
