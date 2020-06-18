@@ -1,9 +1,9 @@
 'use strict';
 
 // 1.
-let euroCities = ['Paris', 'London', 'Amsterdam', 'Prague', 'Rome'];
+const euroCities = ['Paris', 'London', 'Amsterdam', 'Prague', 'Rome'];
 console.log(euroCities);
-let secondCity = euroCities[1];
+const secondCity = euroCities[1];
 console.log(secondCity);
 
 // 2.
@@ -26,15 +26,15 @@ euroCities.splice(1, 2);
 console.log('ex 6 ', euroCities);
 
 // 7.
-let asianCities = ['Seoul', 'Bangkok', 'Tokyo', 'Shanghai', 'Delhi'];
+const asianCities = ['Seoul', 'Bangkok', 'Tokyo', 'Shanghai', 'Delhi'];
+console.log('ex.7 ', asianCities);
 
-
-// 8. Array.filter():
-let selectedArray = asianCities.slice(1, 4);
+// 8.
+const selectedArray = asianCities.slice(1, 4); // second number is exclusive
 console.log('ex.8 ', selectedArray);
 
 // 9.
-let worldCities = euroCities.concat(asianCities);
+const worldCities = euroCities.concat(asianCities);
 console.log('ex.9 ', worldCities);
 
 // 10.
@@ -60,14 +60,24 @@ console.log('ex.13', myString);
 // 13 second
 console.log('ex 13 2nd ', worldCities.join(', '));
 
+
 // bonus
 function reverseFun(str) {
-    let reverseString = [];
-    for (let i = 1; i <= str.length; i++) {
-        reverseString.push(str[str.length - i]);
-    }
-    return reverseString.join('');
+
+    const reverseArray = str.split('');
+    console.log(reverseArray);
+    reverseArray.reverse();
+    return reverseArray.join('');
 }
 console.log(reverseFun('hello world'));
 
 
+// extra practice
+const mySiblings = ['Gogo', 'Tania'];
+const myParents = ['Antonis', 'Eua'];
+const myFamily = mySiblings.concat(myParents);
+console.log(myFamily);
+myFamily.push('Atari');
+console.log(myFamily);
+myFamily.reverse();
+console.log(myFamily);
