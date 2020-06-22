@@ -5,7 +5,7 @@ const findGreatest = (myArray, num) => {
     let result = '';
     for (let i = 0; i < myArray.length; i++) {
         if (num < myArray[i]) {
-            result = result + ' ' + myArray[i];
+            result = myArray[i] + ' ' + result;
         }
     }
     return result;
@@ -17,11 +17,11 @@ console.log(findGreatest([0, 10, 4], 4));
 
 // 2. 
 const longestWord = (str) => {
-    str = str.split(' ');
+    let myArray = str.split(' ');
     let result = '';
-    for (let i = 0; i < str.length; i++) {
-        if (str[i].length > result.length) {
-            result = str[i];
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i].length > result.length) {
+            result = myArray[i];
         }
     }
     return result;
@@ -37,8 +37,9 @@ const reverse = (num) => {
     myString = myString.split('');
     myString = myString.reverse();
     myString = myString.join('');
-    myString = myString * Math.sign(myString);
-    return myString;
+    // myString = myString * Math.sign(myString);
+
+    return parseInt(myString);
 
 }
 console.log('ex. 3 ', reverse(34532));
@@ -46,11 +47,12 @@ console.log('ex. 3 ', reverse(34532));
 
 // 4.
 function vowels(str) {
-    var m = str.match(/[aeiouAEIOU]/g); // creates an array with the vowels that finds in the string
-    console.log(m);
-    return m === null ? 0 : m.length;
+    let result = str.match(/[aeiou]/gi); // creates an array with the vowels that finds in the string. [i is for insensitive]
+    // console.log(result);
+    return result;
 }
 console.log('ex 4 ', vowels('this is a string'));
+console.log('ex 4 ', vowels('here we are now'));
 
 
 // 5 .
@@ -120,4 +122,3 @@ const alphaOrder = (str) => {
 
 console.log('bonus ', alphaOrder('webdev'));
 console.log('bonus ', alphaOrder('the quick brown fox jumps over the lazy dog'));
-
