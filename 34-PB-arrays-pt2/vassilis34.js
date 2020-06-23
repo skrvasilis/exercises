@@ -92,13 +92,13 @@ const dictionary = (str, myArray) => {
     return result;
 }
 console.log('ex 7 ', dictionary("bu", ["button", "breakfast", "border"]));
-console.log('ex 7 ', dictionary("tri", ["triplet", "tries", "trip", "piano", "tree"]))
+console.log('ex 7 ', dictionary("tri", ["triplet", "tries", "trip", "piano", "tree"]));
 console.log('ex 7 ', dictionary("beau", ["pastry", "delicious", "name", "boring"]));
 
 // 8.
 const evenNum = (num) => {
     const result = [];
-    for (let i = 1; i <= num; i++) {
+    for (let i = 2; i <= num; i++) {
         if (i % 2 === 0) {
             result.push(i);
         }
@@ -112,13 +112,35 @@ console.log('ex 8 ', evenNum(2));
 console.log('ex 8 ', evenNum(1));
 
 
+// 8. second
+const evenNum2 = (num) => {
+    const result = [];
+    for (let i = 2; i <= num; i += 2) {
+        result.push(i);
+    }
+    return result;
+}
+
+console.log('ex 8 ', evenNum2(8));
+console.log('ex 8 ', evenNum2(4));
+console.log('ex 8 ', evenNum2(2));
+console.log('ex 8 ', evenNum2(1));
+
+
 // bonus
 const alphaOrder = (str) => {
-    str = str.split('');
-    str.sort();
-    str = str.join('');
-    return str;
+    let myArray = str.split('');
+    myArray.sort();
+    let result = myArray.join('');
+    return result;
 }
 
 console.log('bonus ', alphaOrder('webdev'));
 console.log('bonus ', alphaOrder('the quick brown fox jumps over the lazy dog'));
+
+// bonus second
+const alphaOrder2 = (str) => {
+    return str.split('').sort().join('');
+}
+
+console.log('bonus ', alphaOrder2('webdev'));
