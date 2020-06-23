@@ -73,8 +73,8 @@ function noDuplicates(array) {
 
     for (let i = 0; i < array.length; i++) {
         if (array.indexOf(array[i]) !== array.lastIndexOf(array[i])) {
-            array = array.splice(i, 1);
-
+            array.splice(i, 1);
+            i = 0;
         }
     }
     return array;
@@ -84,16 +84,6 @@ console.log(noDuplicates([1, 4, 4, 7, 7, 7]));
 console.log(noDuplicates([1, 6, 6, 6, 9, 9]));
 console.log(noDuplicates([2, 2, 2, 2, 2, 2]));
 console.log(noDuplicates([5, 10, 15, 20, 25]));
-
-
-
-
-
-
-
-
-
-
 
 
 // 7. 
