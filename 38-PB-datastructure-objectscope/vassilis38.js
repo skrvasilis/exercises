@@ -19,12 +19,11 @@ const person = {
     age: 38,
     job: 'Actor',
     city: 'Paris',
-    myFunction : function () {
+    myFunction: function () {
         return `${this.firstName} ${this.lastName} is an ${this.age} years old ${this.job} living in ${this.city}`;
     },
-    objectLength : function () {
+    objectLength: function () {
         return Object.keys(this).length
-
     }
 }
 console.log(person.myFunction());
