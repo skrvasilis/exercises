@@ -9,12 +9,26 @@ const stars = () => {
 }
 stars();
 
+// 1. Andrea
+const halfTree = (lines) => {
+    let array = [];
+    for (let i = 0; i < lines; i++) {
+        for (let j = 0; j < i; j++) {
+            array.push('*');
+            console.log(array.join(" "));
+        }
+    }
+}
+console.log("Task 1: Tree");
+halfTree(4);
+
+
 // 2. 
 const nestedArray = (arr) => {
     for (let i = 0; i < arr.length; i++) {
         console.log('row', i);
         for (let j = 0; j < arr[i].length; j++)
-            console.log('',arr[i][j]);
+            console.log('', arr[i][j]);
     }
 }
 nestedArray([
@@ -31,15 +45,15 @@ const nestedLoop = (arr) => {
     let myString2 = '';
     for (let i = 1; i < arr.length; i++) {
         for (let j = 0; j < 3; j++) {
-            myString1 = myString1 + ' ' + arr[i];
+            myString1 += arr[i] + ' ';
         }
     }
     for (let i = 0; i < 3; i++) {
         for (let j = 0; j < arr.length; j++) {
-            myString2 = myString2 + ' ' + arr[j];
+            myString2 += arr[j] + ' ';
         }
     }
-    console.log(myString1 + '\n' + myString2);
+    return myString1 + '\n' + myString2;
 }
 
-nestedLoop([0, 1, 2, 3, 4]);
+console.log(nestedLoop([0, 1, 2, 3, 4]));
