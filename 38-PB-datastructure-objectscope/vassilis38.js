@@ -19,18 +19,16 @@ const person = {
     age: 38,
     job: 'Actor',
     city: 'Paris',
+    myFunction : function () {
+        console.log(`${this.firstName} ${this.lastName} is an ${this.age} years old ${this.job} living in ${this.city}`);
+    }
 }
+person.myFunction();
 
-function myFunction() {
-    console.log(`${person.firstName} ${person.lastName} is an ${person.age} years old ${person.job} living in ${person.city}`);
-}
 
-myFunction();
-
+// 3.
 const objectLength = (obj) => {
-    let myArray = Object.keys(obj);
-    console.log(myArray);
-    return myArray.length
+    return Object.keys(obj).length
 }
 
 console.log(objectLength(person));
