@@ -21,14 +21,11 @@ const person = {
     city: 'Paris',
     myFunction : function () {
         console.log(`${this.firstName} ${this.lastName} is an ${this.age} years old ${this.job} living in ${this.city}`);
+    },
+    objectLength : function () {
+        return Object.keys(this).length
+
     }
 }
 person.myFunction();
-
-
-// 3.
-const objectLength = (obj) => {
-    return Object.keys(obj).length
-}
-
-console.log(objectLength(person));
+console.log(person.objectLength());
