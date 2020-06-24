@@ -20,12 +20,12 @@ const person = {
     job: 'Actor',
     city: 'Paris',
     myFunction : function () {
-        console.log(`${this.firstName} ${this.lastName} is an ${this.age} years old ${this.job} living in ${this.city}`);
+        return `${this.firstName} ${this.lastName} is an ${this.age} years old ${this.job} living in ${this.city}`;
     },
     objectLength : function () {
         return Object.keys(this).length
 
     }
 }
-person.myFunction();
+console.log(person.myFunction());
 console.log(person.objectLength());
