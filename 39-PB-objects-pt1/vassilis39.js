@@ -91,24 +91,30 @@ console.log(merge(first, last));
 
 // if they have the same property value we get only the second object as an output
 
-// bonus 4 not ready
+// bonus 4
 const person4 = {
     name: "John",
     job: "teacher"
 };
-let newObject4 = {};
 
-for (const property in person4) {
-    console.log(property);
-    console.log(person4[property]);
-    newObject4[person4[property]] = [property];
+const switchKeys = (obj) => {
+    let newObject = {};
+    for (const property in obj) {
+        console.log(property);
+        console.log(obj[property]);
+        newObject[obj[property]] = property;
+    }
+    return newObject;
 }
-console.log(newObject4);
+console.log(switchKeys(person4));
+
+
 
 
 // bonus 5 
 const returnKeysValues = (obj) => {
     const resultArray = new Array(2);
+
     resultArray[0] = Object.keys(obj);
     resultArray[1] = Object.values(obj);
     return resultArray;
