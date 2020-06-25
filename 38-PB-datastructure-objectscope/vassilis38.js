@@ -28,3 +28,5 @@ const person = {
 }
 console.log(person.myFunction());
 console.log(person.objectLength());
+
+
