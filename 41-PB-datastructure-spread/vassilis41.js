@@ -10,7 +10,9 @@ let euroCountries2 = ['Italy', 'France', 'spain', 'Norway', 'Sweden']
 let asianCountries2 = ['China', 'India', 'Iran', 'Japan', 'South Korea'];
 
 let allCountries = [...euroCountries2].concat(...asianCountries2);
+let allCountries2 = [...euroCountries2,...asianCountries2];
 console.log('ex.1.b', allCountries);
+console.log('ex.1.b', allCountries2);
 
 // 2.
 let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -20,8 +22,6 @@ console.log('ex.2', cloneArray);
 
 // 3. 
 const largest = (arr) => Math.max(...arr);
-
-
 console.log('ex.3', largest([2, 34, 65, 22, 1]));
 
 // 4.
@@ -64,4 +64,5 @@ const isWhole = (...arg) => {
 
 console.log(isWhole(1, 2, 3, 4));
 console.log(isWhole(9, 2, 2, 5));
-console.log(isWhole(2, 2, 2, 2));
+console.log(isWhole(4, 5, 6, 5));
+console.log(isWhole(...[2, 2, 2, 2]));
