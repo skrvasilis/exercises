@@ -51,3 +51,17 @@ console.log('ex 5.b', employee);
 employee.name = 'Mark';
 employee.role = 'Manager';
 console.log('ex 5.c', employee);
+
+
+// bonus 
+const isWhole = (...arg) => {
+    let sum = 0;
+    for (const items in arg) {
+        sum += arg[items];
+    }
+    return sum % arg.length === 0;
+}
+
+console.log(isWhole(1, 2, 3, 4));
+console.log(isWhole(9, 2, 2, 5));
+console.log(isWhole(2, 2, 2, 2));
