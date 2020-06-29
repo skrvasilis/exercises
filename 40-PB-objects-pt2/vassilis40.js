@@ -3,13 +3,12 @@
 // 1. 
 const inTheRange = (num, obj) => {
     let minMax = Object.values(obj);
+    // console.log(minMax);
     if (num >= minMax[0] & num <= minMax[1]) {
         return true;
     } else {
         return false;
     }
-
-
 }
 
 console.log('ex.1', inTheRange(4, {
@@ -28,6 +27,29 @@ console.log('ex.1', inTheRange(5, {
     min: 5,
     max: 5
 }));
+
+
+// 1. second way
+const check = (num, obj) => num >= obj.min && obj.max >= num;
+
+console.log('ex.1', check(4, {
+    min: 0,
+    max: 5
+}));
+console.log('ex.1', check(4, {
+    min: 4,
+    max: 5
+}));
+console.log('ex.1', check(4, {
+    min: 6,
+    max: 10
+}));
+console.log('ex.1', check(5, {
+    min: 5,
+    max: 5
+}));
+
+
 
 // 2
 const givenArray = [{
@@ -63,7 +85,10 @@ const scrabble = (arr) => {
 console.log('The player\'s maximum score: ', scrabble(givenArray));
 
 // 3. 
-const EmptyObject = (obj) => Object.keys(obj).length === 0;
+const EmptyObject = obj => {
+    // console.log(Object.keys(obj));
+    return Object.keys(obj).length === 0;
+}
 
 console.log('ex 3', EmptyObject({}));
 console.log('ex 3', EmptyObject({
@@ -76,6 +101,7 @@ const countingLetters = (str) => {
     const obj = {};
     for (let i = 0; i < str.length; i++) {
         obj[str[i]] = str.split(str[i]).length - 1;
+        console.log(str.split(str[i]));
     }
     return obj;
 }
@@ -127,3 +153,12 @@ for (let i = 0; i < programming.languages.length; i++) {
 for (const item in programming) {
     console.log('the keys', item);
 }
+for (const item in programming) {
+    console.log('the values', programming[item]);
+}
+programming.isReCh = function () {
+    if (this.isRewarding === true && this.isChallenging === true) {
+        return `Learning the programming languages: ${programming.languages.join(", ")} is rewarding and challenging.`;
+    }
+}
+console.log(programming.isReCh());
