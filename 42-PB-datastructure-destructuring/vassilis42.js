@@ -1,8 +1,8 @@
 'use strict';
 
 // 1.
-let fruit, vegetable, food;
-[fruit, vegetable, ...food] = ['banana', 'cucumber', 'bread', 'cakes', 'pizza'];
+// let fruit, vegetable, food;
+const [fruit, vegetable, ...food] = ['banana', 'cucumber', 'bread', 'cakes', 'pizza'];
 console.log(fruit);
 console.log(vegetable);
 console.log(food);
@@ -12,13 +12,13 @@ const halloween = {
     fran: 'witch',
     mike: 'zombie',
     lena: 'mummy'
-}
-let fran, mike, lena;
-({
+};
+// let fran, mike, lena;
+const {
     fran,
     mike,
     lena
-} = halloween);
+} = halloween;
 console.log(fran);
 console.log(mike);
 console.log(lena);
