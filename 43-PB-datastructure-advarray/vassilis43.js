@@ -51,9 +51,13 @@ console.log('ex 3', filterEvens([22, 2, 31, 110, 6, 13]));
 // 4. 
 const friends = ["rika", "jenna", "bleda", "oliver", "itamar"];
 const filterItems = (arr, str) => {
-    return arr.filter(function (value) {
+    const filteredArr = arr.filter(function (value) {
         return value.includes(str);
     })
+    for (let i = 0; i < filteredArr.length; i++) {
+        filteredArr[i] = filteredArr[i][0].toUpperCase() + filteredArr[i].slice(1);
+    }
+    return filteredArr;
 }
 
 console.log('ex 4', filterItems(friends, 'ka'));
