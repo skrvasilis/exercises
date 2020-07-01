@@ -89,3 +89,30 @@ console.log('ex 5', sumUp([6, 7, 7]));
 const squareRoot = (arr) => arr.map((value) => Math.sqrt(value));
 
 console.log('ex 6', squareRoot([4, 9, 16, 25, 44]));
+
+
+// bonus
+
+let first = ['🐮', '🍠', '🐔', '🦄'];
+let after = ['🍔', '🍟', '🍗', '🍿'];
+console.log(first);
+
+const cook = (arr) => {
+    return arr.map(function (value, index, array) {
+        return array[index] = after[index];
+    })
+}
+console.log(cook(first));
+
+function isVegetarian(value) {
+return (value === '🍿' || value === '🍟')
+}
+const vegetarian = after.filter(isVegetarian);
+console.log(vegetarian)
+
+function eat() {
+    return '💩';
+}
+
+const finalOutput = after.reduce(eat);
+console.log(finalOutput);
