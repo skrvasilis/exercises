@@ -15,19 +15,33 @@ const orders = [{
     }
 ];
 
-const arrayOrders = []
-
-for (const obj of orders) {
-    for (const key in obj) {
-        console.log(obj[key]);
-        arrayOrders.push(obj[key]);
+const theAmount = (arr) => {
+    const arrayOrders = [];
+    /*  for (const obj of arr) {
+         for (const key in obj) {
+             arrayOrders.push(obj[key]);
+         }
+     } */
+    for (let key in orders) {
+        arrayOrders.push(orders[key].amount);
     }
-}
-const totalAmount = arrayOrders.reduce(function (previous, current) {
-    return previous + current;
-})
+    const result = arrayOrders.reduce(function (previous, current) {
+        return previous + current;
+    });
+    return result;
 
-console.log('ex 1.', totalAmount);
+}
+console.log('ex 1.', theAmount(orders));
+
+// 1. second way
+const theAmount2 = (arr) => {
+    const totalAmount2 = arr.reduce(function (previous, current) {
+        return previous + current['amount'];
+    }, 0);
+    return totalAmount2
+}
+console.log('ex 1.', theAmount2(orders));
+
 
 // 2
 const arrayOfNumbers = [3, 45, 6, 56, 7, 9];
@@ -37,9 +51,9 @@ const newArrayOfNumbers = arrayOfNumbers.map(function (value) {
 });
 console.log('ex 2.', newArrayOfNumbers);
 
-// const result = ar.filter(num => num === maxNum);
-Array.prototype.filter
+
 // 3.
+Array.prototype.filter
 const filterEvens = (arr) => arr.filter(function (value) {
     return value % 2 === 0;
 });
@@ -53,11 +67,11 @@ const friends = ["rika", "jenna", "bleda", "oliver", "itamar"];
 const filterItems = (arr, str) => {
     const filteredArr = arr.filter(function (value) {
         return value.includes(str);
-    })
-    for (let i = 0; i < filteredArr.length; i++) {
-        filteredArr[i] = filteredArr[i][0].toUpperCase() + filteredArr[i].slice(1);
-    }
-    return filteredArr;
+    });
+    const upArr = filteredArr.map(function (value, index, arr) {
+        return value[0].toUpperCase() + value.slice(1)
+    });
+    return upArr;
 }
 
 console.log('ex 4', filterItems(friends, 'ka'));
