@@ -1,13 +1,13 @@
 'use strict';
 
-// 1.(
+// 1.
 
 class Person {
     constructor(name, age) {
         this.name = name;
         this.age = age;
         this.describe = function () {
-            return `${name},${age} years old`
+            return `${this.name},${this.age} years old`;
         }
     }
 }
