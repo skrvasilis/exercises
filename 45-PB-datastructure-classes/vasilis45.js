@@ -6,28 +6,27 @@ class Person {
     constructor(name, age) {
         this.name = name;
         this.age = age;
-        this.describe = function () {
-            return `${this.name},${this.age} years old`;
-        }
+    }
+    describe() {
+        return `${this.name},${this.age} years old`;
     }
 }
 
 let vasilis = new Person('vasilis', 33);
+console.log(vasilis);
 console.log(vasilis.describe());
 
 
 // 2
 class Cylinder {
-    constructor(r, h, p = Math.PI) {
+    constructor(r, h) {
         this.r = r;
-        this.h = h;
-        this.p = p;
-        this.volume = function () {
-            return (p * Math.pow(r, 2) * h).toFixed(4)
-        }
+        this.h = h
+    }
+    volume = function () {
+        return (Math.PI * Math.pow(this.r, 2) * this.h).toFixed(4);
     }
 }
-
 let myCylinder = new Cylinder(2, 4);
 console.log(myCylinder.volume());
 
@@ -57,17 +56,48 @@ myTime.start();
 // 4
 
 class TV {
-    constructor(brand, volume = 50, channel = 1) {
+    constructor(brand) {
         this.brand = brand;
-        this.channel = channel;
+        this.channel = 1;
         this.volume = 50;
-        this.channelMethod = function (max) {
-            this.channel = Math.floor(Math.random() * Math.floor(max));
+    }
+    volumeUp() {
+        if (this.volume < 100) {
+            this.volume++;
+            console.log('volume up', this.volume);
+        } else {
+            console.log('you reached the volume limit');
         }
+    }
+    volumeDown() {
+        if (this.volume >= 0) {
+            this.volume--;
+            console.log('volume down', this.volume);
+        } else {
+            console.log('you reached the volume limit');
+        }
+    }
+    channelMethod = function () {
+        this.channel = Math.floor(Math.random() * Math.floor(50));
+    }
+    print() {
+        return `${this.brand} at chanel ${this.channel}, volume ${this.volume}`;
+    }
+    reset() {
+        this.volume = 50;
+        this.channel = 1;
     }
 }
 
 
 let myChanel = new TV('sony');
-myChanel.channelMethod(50);
+myChanel.channelMethod();
+myChanel.volumeUp();
+myChanel.volumeUp();
+myChanel.volumeUp();
+myChanel.volumeUp();
 console.log(myChanel.channel);
+console.log(myChanel.volume);
+console.log(myChanel.print());
+myChanel.reset();
+console.log(myChanel.print());
