@@ -67,9 +67,10 @@ console.log(compareArrays([4, 7, 6], [4, 5, 6]));
 function sum(array) {
     if (array.length < 1) {
         return 0;
+    } else {
+        let result = array.pop() + sum(array);
+        return result;
     }
-    let result = array.pop() + sum(array);
-    return result;
 }
 
 
