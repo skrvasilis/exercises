@@ -23,11 +23,12 @@ const doggo = {
     name: 'Doggo',
     breed: '',
     favoriteFoods: ['burger', 'pizza', 'pasta'],
-}
-doggo.foods = function () {
+
+foods: function () {
     for (const item of this.favoriteFoods) {
         console.log('2.4', item);
     }
+}
 }
 console.log('2.3', doggo.favoriteFoods[1]);
 doggo.foods();
