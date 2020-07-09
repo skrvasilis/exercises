@@ -4,7 +4,7 @@ class Dog {
     constructor(name) {
         this.name = name;
     }
-    bark = function () {
+    bark() {
         console.log(`${this.name} says woof`);
     }
 };
@@ -12,7 +12,6 @@ class Dog {
 let fido = new Dog("fido");
 fido.bark();
 
-// bark method is outside of the class 
 
 // 2.
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
@@ -26,7 +25,7 @@ const getMonthName = (num) => {
         }
 
     } catch (e) {
-        return e;
+        return e.message;
     }
 }
 console.log(getMonthName(13));
@@ -47,6 +46,7 @@ const reverseString = (str) => {
 
 console.log(reverseString(12));
 console.log(reverseString('hello'));
+console.log(reverseString());
 
 // 4
 function compareArrays(arr1, arr2) {
@@ -65,6 +65,8 @@ console.log(compareArrays([4, 7, 6], [4, 5, 6]));
 
 // 5.
 function sum(array) {
+    console.log(array);
+    debugger
     if (array.length < 1) {
         return 0;
     } else {
@@ -76,3 +78,19 @@ function sum(array) {
 
 console.log(sum([1, 2, 3]));
 console.log(sum([1, 2, 3, 4]));
+
+/* 
+// martina
+function sum(array) {
+    try {
+        let result = array.pop() + sum(array);
+        return result;
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+
+
+console.log(sum([1, 2, 3]));
+console.log(sum([1, 2, 3, 4])); */
