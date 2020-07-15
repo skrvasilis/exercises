@@ -3,6 +3,7 @@
 let euroCountries = ['Italy', 'France', 'spain', 'Norway', 'Sweden']
 let asianCountries = ['China', 'India', 'Iran', 'Japan', 'South Korea'];
 
+console.log(...asianCountries)
 euroCountries.push(...asianCountries);
 console.log('ex.1.a', euroCountries);
 

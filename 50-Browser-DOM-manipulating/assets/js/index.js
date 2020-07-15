@@ -25,47 +25,29 @@ const books = [{
 ];
 
 let ul = document.querySelector('.book-list')
-ul.style.display = 'flex'
-ul.style.flexWrap = 'noWrap'
-ul.style.justifyContent = 'space-around'
-
 
 
 books.map(elem => {
-  let card = document.createElement("li")
-  let image = document.createElement("img")
-  let h2 = document.createElement("h2")
-  let h3 = document.createElement("h3")
-  let p = document.createElement('p')
-  h2.innerHTML = elem.title
-  image.setAttribute("src", elem.img)
-  h3.innerHTML = elem.author
-  p.innerHTML = elem.alreadyRead ? 'read' : 'to read'
-  p.style.backgroundColor = elem.alreadyRead ? 'green' : 'grey'
-
-  card.append(image, h2, h3, p)
-  ul.appendChild(card)
-})
-
+  let li = document.createElement("li")
+  li.classList.add('book')
+  let img = document.createElement("img")
+  img.setAttribute("src", elem.img)
+  img.classList.add('img', 'img-fluid')
+  let title = document.createElement("h2")
+  let authorName = document.createElement("h3")
+  let footer = document.createElement('footer')
+  footer.classList.add('text-right')
+  let button = document.createElement('span')
+  button.classList.add('status')
+  title.innerText = elem.title
+  authorName.textContent = elem.author
 
 
+  button.innerText = elem.alreadyRead === true ? 'read' : 'to read'
+  button.style.backgroundColor = elem.alreadyRead ? 'green' : 'grey'
 
-let li = [...document.querySelectorAll('li')]
-console.log(li)
- li.map(element => {
-  element.style.margin = '20px'
-   element.style.width = '200px'
-   element.style.marginLeft = '50px'
-});
-
-let image = [...document.querySelectorAll('img')]
-image.map(el => {
-  el.style.border = '4px solid black'
-  el.style.width = '300px'
-  el.style.height = '500px'
-})
-
-let read = [...document.querySelectorAll('p')]
-read.map(el=> {
-  el.style.color = 'white'
+  footer.appendChild(button)
+  
+  li.append(img, title, authorName, footer)
+  ul.appendChild(li)
 })
