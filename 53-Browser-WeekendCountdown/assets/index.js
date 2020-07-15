@@ -14,7 +14,7 @@ dayLeft = weekDay.indexOf('Saturday') - weekDay.indexOf(weekDay[myDay])
 button.addEventListener('click', (e) => {
     e.preventDefault()
     if (inp.value) {
-        h2.innerText = ''
         h2.innerText = `Hello ${inp.value}. Today is ${weekDay[myDay]}. Only ${dayLeft} days left until the Weekend!`
+        inp.value = ''
     }
 })

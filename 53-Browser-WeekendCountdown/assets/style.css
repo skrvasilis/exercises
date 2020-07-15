@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -6,21 +12,33 @@
 
 input {
     width: 200px;
-    height: 50px;
+    height: 55px;
+    font-size: 1.5em;
+    background-color: rgb(189, 15, 59);
+    color: white;
+    border-radius: 10%;
+
 }
 
 form {
-    margin: 20px auto;
+    margin: 50px auto;
+    display: flex;
+
 }
 
 button {
     width: 70px;
     height: 55px;
+    background-color: rgb(226, 49, 49);
+    color: white;
+    border-radius: 10%;
+    margin-left: 5px;
 }
 
 h1,
 h2 {
     text-align: center;
+    margin-top: 50px;
 }
 
 h2 {
