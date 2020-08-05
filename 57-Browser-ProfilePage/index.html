@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Profile</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <form>
-      <fieldset>
-        <legend>Put your details here!</legend>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-        <label>Put your name here</label>
-        <input type="text" />
+<body>
+  <form>
+    <fieldset>
+      <legend>Put your details here!</legend>
 
-        <label>Put your birthday here</label>
-        <input type="date" />
+      <label>Put your name here</label>
+      <input type="text" name="name" />
 
-        <label>Upload a photo of yours</label>
-        <input type="file" /><br />
+      <label>Put your birthday here</label>
+      <input type="date" name="date" />
 
-        <label>Pick your favorite color</label>
-        <input id="primaryColor" type="color" /><br />
+      <label>Upload a photo of yours</label>
+      <input type="file" name="file" /><br />
 
-        <label>Pick your secondary color</label>
-        <input id="secondaryColor" type="color" /><br />
+      <label>Pick your favorite color</label>
+      <input id="primaryColor" type="color" name="primaryColor" /><br />
 
-        <textarea
-          placeholder="Write a paragraph about yourself"
-          maxlength="140"
-        ></textarea>
-        <p class="countermessage">Type all you need in 140 characters</p>
+      <label>Pick your secondary color</label>
+      <input id="secondaryColor" type="color" name="secondaryColor" /><br />
 
-        <label>Pick your Skills: </label><br />
+      <textarea placeholder="Write a paragraph about yourself" maxlength="140" name="textArea"></textarea>
+      <p class="countermessage">Type all you need in 140 characters</p>
 
-        <li><input type="checkbox" />JavaScript</li>
-        <li><input type="checkbox" />Ruby</li>
-        <li><input type="checkbox" />Python</li>
-        <li><input type="checkbox" />Java</li>
-        <li><input type="checkbox" />PHP</li>
-      </fieldset>
-    </form>
+      <label>Pick your Skills: </label><br />
 
-    <script src="js/index.js"></script>
-  </body>
+      <li><input type="checkbox" name="javascript" />JavaScript</li>
+      <li><input type="checkbox" name="ruby" />Ruby</li>
+      <li><input type="checkbox" name="python" />Python</li>
+      <li><input type="checkbox" name="java" />Java</li>
+      <li><input type="checkbox" name="php" />PHP</li>
+    </fieldset>
+    <input type="submit" value="create cv">
+    <input type="reset" value="reset form">
+  </form>
+
+  <div class="cv">
+    <h1 class="myName"></h1>
+    <h2 class="age">kostas is 20 years old</h2>
+    <img src="" alt="">
+    <!-- <p class="paragraph"></p>
+    <p class="skills"></p> -->
+
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
 </html>

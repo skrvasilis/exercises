@@ -4,4 +4,23 @@ import '../styles/main.scss';
 
 
 // \/ All of your javascript should go here \/
+let myWindow = document.getElementById('myModal')
+let close = document.querySelector('.close')
 
+let window = () => {
+    let promise = new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve(   
+                myWindow          
+            )
+        }, 60);
+    })
+    return promise;
+}
+
+window().then(result =>{
+    result.style.display = 'block'
+    close.addEventListener('click',()=>{
+        result.style.display = 'none'
+    })
+})

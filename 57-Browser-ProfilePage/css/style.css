@@ -66,3 +66,14 @@ li {
 span:hover {
   cursor: pointer;
 }
+
+.cv {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 700px;
+  margin: 5% auto;
+  border: 2px solid black;
+}
