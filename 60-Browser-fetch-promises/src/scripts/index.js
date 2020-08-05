@@ -13,7 +13,7 @@ let window = () => {
             resolve(   
                 myWindow          
             )
-        }, 60);
+        }, 60000);
     })
     return promise;
 }
