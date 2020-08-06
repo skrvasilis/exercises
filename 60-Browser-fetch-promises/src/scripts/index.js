@@ -8,19 +8,19 @@ let myWindow = document.getElementById('myModal')
 let close = document.querySelector('.close')
 
 let window = () => {
-    let promise = new Promise((resolve,reject)=>{
+    let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(   
-                myWindow          
+            resolve(
+                myWindow
             )
-        }, 60000);
+        }, 60);
     })
     return promise;
 }
 
-window().then(result =>{
+window().then(result => {
     result.style.display = 'block'
-    close.addEventListener('click',()=>{
+    close.addEventListener('click', () => {
         result.style.display = 'none'
     })
 })
